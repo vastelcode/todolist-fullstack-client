@@ -1,0 +1,1 @@
+export { VitalPage } from "./VitalPage.tsx";

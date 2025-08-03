@@ -1,0 +1,15 @@
+@use '@/shared/styles' as *;
+
+.logout {
+  width: 288px;
+  height: 59px;
+  padding-left: 15px;
+  cursor: pointer;
+  &__text {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: $fz-h3;
+    color: white;
+    transition: .3s;
+  }
+}

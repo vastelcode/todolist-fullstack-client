@@ -1,0 +1,26 @@
+@use '@/shared/styles' as *;
+
+.wrapper {
+  width: 695px;
+  height: 36px;
+  box-shadow: 0px 0px 2px black;
+  border-radius: 8px;
+}
+
+.input {
+  @extend %clear-outline-input;
+  width: auto;
+  height: auto;
+  flex: 1;
+  padding-left: 15px;
+  font-weight: 500;
+  font-size: $fz-h4;
+  font-family: 'Montserrat';
+  color: black;
+  &::placeholder {
+    font-weight: 800;
+    font-size: $fz-h4;
+    font-family: 'Montserrat';
+    color: $color-gray;
+  }
+}

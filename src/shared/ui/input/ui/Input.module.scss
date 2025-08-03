@@ -1,0 +1,46 @@
+@use '@/shared/styles' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.overlay {
+  width: 559px;
+  height: 60px;
+  gap: 24px;
+  padding-right: 15px;
+  border: #565454 1px solid;
+  border-radius: 8px;
+}
+.label {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  font-size: 14px;
+  color: black;
+}
+.icon {
+  width: 28px;
+  height: 28px;
+}
+.input-with-label {
+  width: 511px;
+  height: 37px;
+  border-radius: 6px;
+  border: 1px solid $color-gray;
+  outline: none;
+  box-shadow: 0px 0px 0px transparent;
+}
+.input-with-icon {
+  width: auto;
+  height: auto;
+  flex: 1;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 0px transparent;
+  &::placeholder {
+    font-family: 'Montserrat';
+    font-size: $fz-h3;
+    color: #999999;
+  }
+}

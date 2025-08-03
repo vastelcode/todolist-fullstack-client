@@ -1,0 +1,27 @@
+@use '@/shared/styles' as *;
+
+.sidebar {
+  @extend %flex-items-center;
+  width: 365px;
+  min-height: 100vh;
+  background-color: $color-red;
+  border-radius: 8px;
+  flex-direction: column;
+  gap: 20px;
+}
+.nav {
+  width: 288px;
+}
+.logout {
+  width: 288px;
+  height: 59px;
+  padding-left: 15px;
+  cursor: pointer;
+  &__text {
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: $fz-h3;
+    color: white;
+    transition: .3s;
+  }
+}

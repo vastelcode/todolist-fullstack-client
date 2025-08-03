@@ -9,6 +9,7 @@ import { DashboardPage } from "@/pages/Dashboard/index.ts";
 import { TaskPage } from "@/pages/Task/index.ts";
 import { VitalPage } from "@/pages/Vital/index.ts";
 import { CategoriesPage } from "@/pages/Categories/index.ts";
+import { SettingsPage } from "@/pages/Settings/index.ts";
 
 // импорт шаблонов
 import { Layout } from "@/app/layout/index.ts";
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: RoutePaths.CATEGORIES,
         element: <CategoriesPage/>
+      },
+      {
+        path: RoutePaths.SETTINGS,
+        element: <SettingsPage/>
       },
       {
         path: RoutePaths.NOT_FOUND,

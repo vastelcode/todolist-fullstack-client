@@ -7,9 +7,8 @@ import { LoginPage } from "@/pages/Login/index.ts";
 import { LogupPage } from "@/pages/Logup/index.ts";
 import { DashboardPage } from "@/pages/Dashboard/index.ts";
 import { TaskPage } from "@/pages/Task/index.ts";
-import { VitalPage } from "@/pages/Vital/index.ts";
-import { CategoriesPage } from "@/pages/Categories/index.ts";
 import { SettingsPage } from "@/pages/Settings/index.ts";
+import { ProjectsPage } from "@/pages/Projects/ui/index.ts";
 
 // импорт шаблонов
 import { Layout } from "@/app/layout/index.ts";
@@ -28,16 +27,12 @@ export const router = createBrowserRouter([
         element: <TaskPage/>
       },
       {
-        path: RoutePaths.VITAL,
-        element: <VitalPage/>
-      },
-      {
-        path: RoutePaths.CATEGORIES,
-        element: <CategoriesPage/>
-      },
-      {
         path: RoutePaths.SETTINGS,
         element: <SettingsPage/>
+      },
+      {
+        path: RoutePaths.PROJECTS,
+        element: <ProjectsPage/>
       },
       {
         path: RoutePaths.NOT_FOUND,

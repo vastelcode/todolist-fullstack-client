@@ -5,10 +5,8 @@ import {
   iconDashboardActive,
   iconTask,
   iconTaskActive,
-  iconVital,
-  iconVitalActive,
-  iconCategories,
-  iconCategoriesActive,
+  iconProjects,
+  iconProjectsActive,
   iconSettings,
   iconSettingsActive
 } from '@/shared/assets/icons/index.ts';
@@ -18,7 +16,6 @@ import {
 // Типизация пунктов меню
 interface MenuItem {
   path: AppRoutes;
-  label: string;
   icon: string;
   iconActive: string;
 }
@@ -29,31 +26,21 @@ interface MenuItem {
 export const menuItems: MenuItem[] = [
   { 
     path: RoutePaths.DASHBOARD,
-    label: 'Панель',
     icon: iconDashboard,
     iconActive: iconDashboardActive
   },
   { 
     path: RoutePaths.TASK,
-    label: 'Задачи',
     icon: iconTask,
     iconActive: iconTaskActive
   },
   { 
-    path: RoutePaths.VITAL,
-    label: 'Важные',
-    icon: iconVital,
-    iconActive: iconVitalActive
-  },
-  { 
-    path: RoutePaths.CATEGORIES,
-    label: 'Категории',
-    icon: iconCategories,
-    iconActive: iconCategoriesActive
+    path: RoutePaths.PROJECTS,
+    icon: iconProjects,
+    iconActive: iconProjectsActive
   },
   { 
     path: RoutePaths.SETTINGS,
-    label: 'Настройки',
     icon: iconSettings,
     iconActive: iconSettingsActive
   }

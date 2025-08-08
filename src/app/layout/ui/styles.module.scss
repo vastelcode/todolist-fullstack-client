@@ -1,4 +1,7 @@
+@use '@/shared/styles' as *;
+
 .main {
+  width: $content-size-1;
   display: flex;
-  gap: 76px;
+  gap: 75px;
 }

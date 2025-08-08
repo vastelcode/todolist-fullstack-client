@@ -2,8 +2,8 @@
 
 .card {
   @extend %flex-items-center;
-  width: 288px;
-  height: 59px;
+  width: 55px;
+  height: 55px;
   border-radius: 14px;
   background-color: transparent;
   transition: .3s;
@@ -26,8 +26,8 @@
   }
 }
 
-.card_active {
-  background-color: white;
+.card_active, .card:hover {
+  background-color: $color-purple;
   .card__text {
     color: $color-red;
   }

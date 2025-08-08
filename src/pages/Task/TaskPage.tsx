@@ -2,8 +2,8 @@
 
 export const TaskPage = () => {
   return (
-    <>
-     Задачи мои
-    </>
+    <div className={`page`}>
+      Задачи
+    </div>
   );
 };

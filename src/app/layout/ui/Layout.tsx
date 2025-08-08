@@ -2,8 +2,8 @@ import styles from './styles.module.scss';
 
 import { Outlet } from "react-router-dom";
 
-import { Sidebar } from '@/widgets/Sidebar/ui/index.ts';
-import { Header } from '@/widgets/Header/index.ts';
+import { Sidebar } from '@/widgets/sidebar/ui/index.ts';
+import { Header } from '@/widgets/header/index.ts';
 
 export const Layout = () => {
   return (

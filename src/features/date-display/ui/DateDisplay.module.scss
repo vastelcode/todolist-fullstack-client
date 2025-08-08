@@ -1,11 +1,15 @@
+@use '@/shared/styles/vars' as *;
+
+
 .container {
-  font-family: 'Inter';
+  font-family: 'Montserrat';
   font-weight: 500;
 }
 .day__text {
   font-size: 15px;
+  color: var(--color-text);
 }
 .date__text {
   font-size: 14px;
-  color: #3ABEFF;
+  color: $color-purple;
 }

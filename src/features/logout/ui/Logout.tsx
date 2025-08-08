@@ -6,9 +6,6 @@ export const Logout = () => {
   return (
     <div className={`flex gap-2.5 items-center ${styles.logout}`}>
     <img src={iconLogout} alt="иконка выхода" />
-    <p className={styles['logout__text']}>
-      Выход из аккаунта
-    </p>
   </div>
   );
 }

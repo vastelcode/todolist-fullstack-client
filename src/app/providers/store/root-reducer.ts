@@ -1,5 +1,12 @@
-import { combineReducers } from "@reduxjs/toolkit";
+import { combineReducers } from '@reduxjs/toolkit';
+// Импортируем редюсеры из разных слоев
+// пока что их нет
 
-const rootReducer = combineReducers({});
+// тестовый редюсер для смены темы
+import themeReducer from '@/features/theme/model/slice.js';
+
+const rootReducer = combineReducers({
+  theme: themeReducer
+});
 
 export default rootReducer;

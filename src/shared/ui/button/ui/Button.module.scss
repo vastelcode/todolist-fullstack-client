@@ -9,22 +9,22 @@
 
   border-radius: 6px;
 
-  background-color: $color-orange;
+  background-color: transparent;
 
   min-width: 131px;
   min-height: 34px;
+
+  cursor: pointer;
 }
 .btn_square {
   @extend %flex-center;
   width: 36px;
   height: 36px;
-  background-color: $color-red;
+  background-color: transparent;
   border-radius: 6px;
 
   border: none;
   transition: .3s;
 
-  &:hover {
-    box-shadow: 0px 0px 10px $color-orange;
-  }
+  cursor: pointer;
 }

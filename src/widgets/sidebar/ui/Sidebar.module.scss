@@ -2,18 +2,17 @@
 
 .sidebar {
   @extend %flex-items-center;
-  width: 365px;
+  width: 94px;
   min-height: 100vh;
-  background-color: $color-red;
-  border-radius: 8px;
+  background-color: var(--color-bg);
   flex-direction: column;
   gap: 20px;
+  padding-top: 50px;
 }
 .nav {
-  width: 288px;
+  width: 55px;
 }
 .logout {
-  width: 288px;
   height: 59px;
   padding-left: 15px;
   cursor: pointer;

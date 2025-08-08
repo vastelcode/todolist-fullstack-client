@@ -3,10 +3,9 @@ export const RoutePaths = {
   LOGUP: '/logup',
   LOGIN: '/login',
   DASHBOARD: '/',
-  VITAL: '/vt',
-  TASK: '/mt',
-  CATEGORIES: '/ctg',
-  SETTINGS: '/st',
+  TASK: '/tasks',
+  SETTINGS: '/settings',
+  PROJECTS: '/projects',
   NOT_FOUND: '*'
 } as const;
 

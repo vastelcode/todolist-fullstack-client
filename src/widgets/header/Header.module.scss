@@ -3,10 +3,9 @@
 .header {
   @extend %flex-center;
   width: 100%;
-  background-color: $color-beige;
-  border-radius: 8px;
+  background-color: var(--color-bg);
   &__content {
-    width: 1293px;
-    height: 100px;
+    width: calc(100vw - 50px);
+    height: 76px;
   }
 }

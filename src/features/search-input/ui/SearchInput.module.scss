@@ -5,6 +5,7 @@
   height: 36px;
   box-shadow: 0px 0px 2px black;
   border-radius: 8px;
+  background-color: var(--color-content)
 }
 
 .input {
@@ -16,11 +17,11 @@
   font-weight: 500;
   font-size: $fz-h4;
   font-family: 'Montserrat';
-  color: black;
+  color: var(--color-text);
   &::placeholder {
     font-weight: 800;
     font-size: $fz-h4;
     font-family: 'Montserrat';
-    color: $color-gray;
+    color: var(--color-text);
   }
 }

@@ -2,8 +2,8 @@
 
 export const SettingsPage = () => {
   return (
-    <>
-     Настройки
-    </>
+  <div className={`page`}>
+    Настройки
+  </div>
   );
 };

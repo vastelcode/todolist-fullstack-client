@@ -1,15 +1,46 @@
+@use '@/shared/styles/vars' as *;
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(50px); 
+    // transform: translateY(50px); 
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    // transform: translateY(0);
   }
 }
 
+@keyframes progress {
+  from {
+    width: 0px;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px $color-blue;
+  }
+  100% {
+    box-shadow: 0 0 20px $color-blue, 0 0 30px $color-blue;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(100px);
+  } 
+}
 
 @mixin fade-in($duration: 0.3s) {
   animation: fadeIn $duration ease-in-out;
+}
+
+@mixin progress($duration: 0.3s) {
+  animation: progress $duration ease-in-out;
+}
+
+@mixin glow($duration: 0.3s) {
+  animation: glow $duration ease-in-out infinite;
 }

@@ -9,21 +9,30 @@ type ThemeVariables = {
   '--color-header':string;
   '--color-content':string;
   '--color-text': string;
+  '--color-gray': string;
+  '--color-task-header': string;
+  '--color-task-border': string;
 };
 
 // конфигурация цветовых схем
 const THEME_CONFIG: Record<'light' | 'dark', ThemeVariables> = {
   light : {
-    '--color-bg':'#FFFFFF',
+    '--color-bg':'rgb(255,255,255)',
     '--color-header':'#232360',
     '--color-content':'#F3F4F8',
-    '--color-text': '#8C97A8'
+    '--color-text': '#8C97A8',
+    '--color-gray': '#F3F7FD',
+    '--color-task-header':'#232360',
+    '--color-task-border': '#E2E2E2'
   },
   dark: {
-    '--color-bg': '#1E1F25',
+    '--color-bg': 'rgb(30,31,37)',
     '--color-header': '#FAFAFA',
     '--color-content':'#131517',
-    '--color-text': '#E1E3E7'
+    '--color-text': '#E1E3E7',
+    '--color-gray': '#282932',
+    '--color-task-header': '#F6F6F6',
+    '--color-task-border': '#2C2D37'
   }
 };
 // провайдер для темы

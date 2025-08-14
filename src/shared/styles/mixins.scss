@@ -1,0 +1,19 @@
+@use '@/shared/styles/vars' as *;
+
+
+@mixin flex-gap($gap: 0px,$dir: row) {
+  display: flex;
+  gap: $gap;
+  flex-direction: $dir;
+}
+
+@mixin word-wrap($line-clamp: 3, $max-width: 100px) {
+  max-width: $max-width;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-clamp;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+

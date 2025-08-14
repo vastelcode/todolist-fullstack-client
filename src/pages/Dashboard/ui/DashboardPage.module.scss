@@ -1,0 +1,55 @@
+@use '@/shared/styles' as *;
+
+.dashboard {
+  display: flex;
+  flex: 1;
+  gap: 40px;
+  &__content {
+    flex: 1;
+    height: auto;
+    padding: 30px 40px;
+  }
+  &__wrapper {
+    width: 870px;
+  }
+  
+}
+
+
+@media (max-width: $content-size-1) {
+  .dashboard {
+    &__content {
+      display: flex;
+      justify-content: center;
+    }
+    &__btnArrow {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: $content-size-2) {
+  .dashboard {
+    &__wrapper {
+      width: 564px;
+    }
+  }
+  .wrapper__data {
+    display: grid;
+    grid-template-columns: repeat(2, 274px);
+  }
+}
+
+@media (max-width: $content-size-3) {
+  .dashboard {
+    &__content {
+      padding: 10px 20px;
+    }
+    &__wrapper {
+      width: 294px;
+    }
+  }
+  .wrapper__data {
+    grid-template-columns: 274px;
+  }
+}

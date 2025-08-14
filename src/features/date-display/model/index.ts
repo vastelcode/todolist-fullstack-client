@@ -1,1 +1,1 @@
-export { getDate } from "./getDate.ts";
+export { getDate } from "@/shared/lib/utils/getDate.ts";

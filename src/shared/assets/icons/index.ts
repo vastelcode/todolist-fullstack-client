@@ -18,6 +18,20 @@ export { default as iconSearch } from './icon-search.svg';
 
 export { default as iconLogout } from './icon-logout.svg';
 
+export { default as iconProjectsPurple } from './icon-projects-purple.svg';
+
+export { default as iconStar } from './icon-star.svg';
+
+export { default as iconTasksPurple } from './icon-tasks-purple.svg';
+
+export { default as iconSubtasks } from './icon-subtasks.svg';
+
+export { default as iconArrowRight } from './icon-arrow-right.svg';
+
+export { default as iconArrowLeft } from './icon-arrow-left.svg';
+
+export { default as iconMenu } from './icon-menu.svg';
+
 
 // Дополнительно: экспорт типа для автоподстановки
 export const iconNames = [
@@ -32,6 +46,13 @@ export const iconNames = [
   'iconLogo',
   'iconSearch',
   'iconLogout',
+  'iconProjectsPurple',
+  'iconStar',
+  'iconTasksPurple',
+  'iconSubtasks',
+  'iconArrowLeft',
+  'iconArrowRight',
+  'iconMenu'
 ] as const;
 
 export type IconName = typeof iconNames[number];

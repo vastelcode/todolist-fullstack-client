@@ -1,0 +1,86 @@
+@use '@/shared/styles' as *;
+
+.dropdown-container {
+  position: relative;
+  display: none;
+}
+
+.dropdown-trigger {
+  @extend %flex-center;
+  cursor: pointer;
+
+  width: 50px;
+  height: 50px;
+
+  background: $color-purple;
+  color: white;
+  border-radius: 16px;
+  transition: $st-trans;
+  &_active, &:hover {
+    box-shadow: 0px 0px 20px $color-purple;
+  }
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  width: 100%;
+  min-width: 220px;
+  background: var(--color-bg);
+  border-radius: 16px;
+
+  overflow: hidden;
+  z-index: 100;
+
+  // Анимация
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 0;
+
+}
+
+.dropdown-inner {
+  position: relative;
+  padding: 40px 10px 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #777;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #333;
+  }
+}
+
+// Пример стилей контента
+.menu-content {
+  h3 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+
+  p {
+    line-height: 1.5;
+    color: #7f8c8d;
+  }
+}
+
+@media (max-width: $content-size-4) {
+  .dropdown-container {
+    display: inline-block;
+  }
+}
+

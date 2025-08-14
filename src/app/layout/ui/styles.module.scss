@@ -1,7 +1,37 @@
 @use '@/shared/styles' as *;
 
 .main {
-  width: $content-size-1;
   display: flex;
-  gap: 75px;
+}
+.layout {
+  position: relative;
+}
+
+/* Стили для затемняющего оверлея */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+
+  /* Начальное состояние: полностью прозрачный и неактивный */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  /* Плавный переход для opacity и visibility */
+  transition: opacity 0.4s ease-in-out, visibility 0s linear 0.4s;
+
+  /* Стили для активного состояния оверлея */
+  &_active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    /* visibility появляется немедленно */
+    transition: opacity 0.4s ease-in-out, visibility 0s linear 0s;
+  }
 }

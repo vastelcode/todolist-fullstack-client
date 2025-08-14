@@ -1,0 +1,66 @@
+@use '@/shared/styles' as *;
+
+.card {
+  // @extend %flex-center;
+  min-width: 235px;
+  min-height: 305px;
+  border-radius: 12px;
+  background-color: var(--color-bg);
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Montserrat';
+  flex: 1;
+}
+.tag-project, .tag-priority {
+  @extend %flex-center;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  font-weight: 500;
+  font-size: 12px;
+  min-height: 22px;
+  width: fit-content;
+  padding: 2px 9px;
+  background-color: $color-purple;
+  border-radius: 4px;
+  color: white;
+}
+
+.cover {
+  width: 203px;
+  height: 110px;
+  border-radius: 12px;
+}
+.header {
+  @include word-wrap(1, auto);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-task-header);
+}
+.text {
+  @include word-wrap(3, auto);
+  font-size: 12px;
+  height: 50px;
+  font-weight: 500;
+  color: $color-gray-2;
+}
+.date-display {
+  padding: 2px 5px;
+  width: fit-content;
+  border: 1px solid var(--color-task-border);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-task-header);
+}
+.subtasks-text {
+  font-size: 12px;
+  font-weight: 700;
+  color: $color-gray-2;
+}
+.icon {
+  width: 17px;
+  height: 17px;
+}

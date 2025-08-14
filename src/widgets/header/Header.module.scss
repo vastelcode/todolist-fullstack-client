@@ -9,3 +9,18 @@
     height: 76px;
   }
 }
+
+.responsive-wrapper {
+  display: contents;
+}
+
+@media (max-width: $content-size-4) {
+  .responsive-wrapper {
+    display: none;
+  }
+  .header {
+    &__content {
+      justify-content: space-between;
+    }
+  }
+}

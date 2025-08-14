@@ -1,0 +1,53 @@
+@use '@/shared/styles/placeholders' as *;
+@use '@/shared/styles/mixins' as *;
+
+.card {
+  @extend %flex-center;
+  width: 274px;
+  height: 140px;
+  background-color: var(--color-bg);
+  border-radius: 16px;
+}
+
+.content {
+  width: 233px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
+  @include flex-gap(10px);
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-gray)
+}
+
+.circle {
+  @extend %flex-center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transition: .3s;
+  background-color: var(--color-gray);
+}
+
+.icon {
+  width: 16px;
+  width: 16px;
+}
+
+.text {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.amount {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--color-text);
+}

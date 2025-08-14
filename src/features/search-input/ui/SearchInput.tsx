@@ -22,6 +22,7 @@ export const SearchInput = (
       <Button
       variation='square'
       onClick={() => console.log('Нажатие!')}
+      className={styles.btn}
       >
         <img src={iconSearch} alt="" />
       </Button>

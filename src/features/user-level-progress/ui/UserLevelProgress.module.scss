@@ -1,0 +1,70 @@
+@use '@/shared/styles/vars' as *;
+@use '@/shared/styles/placeholders' as *;
+@use '@/shared/styles/animations' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.bar-container {
+  width: 100%;
+  height: 5px;
+  border-radius: 6px;
+  background-color: var(--color-content);
+  position: relative;
+}
+.bar-active {
+  animation: progress 3s ease-in-out, glow 5s infinite alternate-reverse;
+  height: 5px;
+  border-radius: 6px;
+  background-color: $color-blue;
+  transition: .3s;
+}
+.barEndpoints {
+  @extend %flex-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+.endpoint {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: $color-blue;
+}
+.levelText {
+  font-family: 'Montserrat';
+  font-size: $fz-h3;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.text {
+  font-family: 'Inter';
+  font-size:  14px;
+  font-weight: 500;
+  color: var(--color-text);
+  text-wrap: nowrap;
+}
+
+
+
+
+.header {
+  font-size: 15px;
+  font-family: 'Montserrat';
+  color: $color-purple;
+}
+
+@media (max-width: $content-size-4) {
+  .levelText {
+    font-size: 10px;
+  }
+  .text {
+    font-size: 10px;
+  }
+}

@@ -24,7 +24,7 @@ export { default as iconStar } from './icon-star.svg';
 
 export { default as iconTasksPurple } from './icon-tasks-purple.svg';
 
-export { default as iconSubtasks } from './icon-subtasks.svg';
+export { default as iconPoints } from './icon-points.svg';
 
 export { default as iconArrowRight } from './icon-arrow-right.svg';
 
@@ -49,7 +49,7 @@ export const iconNames = [
   'iconProjectsPurple',
   'iconStar',
   'iconTasksPurple',
-  'iconSubtasks',
+  'iconPoints',
   'iconArrowLeft',
   'iconArrowRight',
   'iconMenu'

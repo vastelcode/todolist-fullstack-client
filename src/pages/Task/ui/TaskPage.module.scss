@@ -1,0 +1,24 @@
+.taskboard {
+  display: flex;
+  gap: 40px;
+  flex: 1;
+  &__content {
+    flex: 1;
+    height: auto;
+    padding: 30px 40px;
+  }
+  &__wrapper {
+    width: 731px;
+    display: grid;
+    grid-template-columns: repeat(3, 233px);
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+}
+
+.header {
+  font-size: 30px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  color: var(--color-text);
+}

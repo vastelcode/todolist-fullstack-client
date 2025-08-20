@@ -1,20 +1,32 @@
+// импорт стилей
 import styles from './styles.module.scss';
 
+// импорт хуков
 import { useRef } from 'react';
 
+// импорт вспомогательных функций
 import { getDate } from '@/shared/lib/utils/getDate.ts';
+import { filterTasks } from '@/shared/lib/utils/filterTasks.ts';
 
-import { DATA_TODAY_TASKS } from '../model/static-data.ts';
+// импорт статических данных
+import { LIST_TASK } from '@/shared/config/static-data.ts';
 
+// импорт компонентов
 import { TaskCard } from '@/enteries/task-card/index.ts';
-
 import { Slider } from './Slider.tsx';
+import { EmptyTodayTasks } from './EmptyTodayTasks.tsx';
 
 export const TodayTasks = () => {
 
-  const today = getDate('point');
+  // получаем текущую дату в формате DD.MM.YYYY
+  const { localDate } = getDate('point');
 
+  // создаём крючок
   const wrapperRef = useRef(null);
+
+  // фильтруем задачи
+
+  const filteredTasks = filterTasks( {date:localDate} , LIST_TASK);
 
   return (
     // основной контнейнер компонента
@@ -24,25 +36,24 @@ export const TodayTasks = () => {
       {/* шапка секции */}
       <div className="flex justify-between">
       <p className={styles.header}>
-        Задачи на {today.localDate}
+        Задачи на {localDate}
       </p>
+      {/* слайдер для списка задач */}
       <Slider element={wrapperRef} />
       </div>
+      {/* список задач */}
       <div className={styles.wrapper} ref={wrapperRef}>
-        {DATA_TODAY_TASKS.map((task, index) => {
-          return (
-            <TaskCard
-            project={task.project}
-            cover={task.cover}
-            header={task.header}
-            text={task.text}
-            date={task.date}
-            subtasks={task.subtasks}
-            priority={task.priority}
-            key={index}
-            />
-          );
-        })}
+        {
+          filteredTasks.length ? 
+          filteredTasks.map((task, index) => {
+            return (
+              <TaskCard
+              {...task}
+              key={index}
+              />
+            );
+          }) : <EmptyTodayTasks/>
+        }
       </div>
     </section>
   );

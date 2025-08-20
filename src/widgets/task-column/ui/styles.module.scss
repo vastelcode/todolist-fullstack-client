@@ -1,0 +1,33 @@
+@use '@/shared/styles/placeholders' as *;
+@use '@/shared/styles/vars' as *;
+
+.task-column-header {
+  @extend %flex-center;
+  width: 233px;
+  height: 54px;
+  padding: 15px;
+  background-color: var(--color-bg);
+  border-radius: 16px;
+}
+.task-column-header__content {
+  @extend %flex-between;
+  flex: 1;
+}
+.task-column-header__text {
+  color: var(--color-task-header);
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 17px;
+}
+.task-column-header__label {
+  @extend %flex-center;
+  min-width: 24px;
+  width: fit-content;
+  height: 24px;
+  border-radius: 5px;
+  background-color: $color-purple;
+  color: white;
+  font-size: 15px;
+  font-family: 'Montserrat';
+  font-weight: 700;
+}

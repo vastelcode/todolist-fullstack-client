@@ -1,10 +1,11 @@
 import styles from './UserLevelProgress.module.scss';
 
-import { getCurrentLevel, getNextLevel, getProgressToNextLevel } from '../model/helpers.ts';
+import { getCurrentLevel, getNextLevel, getProgressToNextLevel } from '@/shared/lib/utils/user-progress-helpers.ts';
 
 import { LevelProgressBar } from './LevelProgressBar.tsx';
 
-import { UserLevelProgressProps} from '../model/types.ts';
+import { UserLevelProgressProps } from '@/shared/types/types.ts';
+
 import { LevelInfo } from './LevelInfo.tsx';
 
 

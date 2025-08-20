@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 
-import { PeriodI } from '../model/types.ts';
+import { PeriodI } from '@/shared/types/types.ts';
 
 export const PeriodSelector = (
   { activePeriod, onClickPeriod } : PeriodI

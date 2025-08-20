@@ -1,7 +1,7 @@
 import styles from './UserLevelProgress.module.scss';
 
-import { getWidth } from '../model/helpers.ts';
-import { UserLevelProgressProps } from '../model/types.ts';
+import { getWidth } from '@/shared/lib/utils/user-progress-helpers.ts';
+import { UserLevelProgressProps } from '@/shared/types/types.ts';
 
 export const LevelProgressBar = (
   { points, levels } : UserLevelProgressProps

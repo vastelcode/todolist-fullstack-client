@@ -5,11 +5,11 @@ import { useState } from 'react';
 import { useSelector } from "react-redux";
 import { RootState } from "@/app/providers/store/index.ts";
 
-import { PeriodType } from '../model/types.ts';
+import { PeriodType } from '@/shared/types/types.ts'
 
-import { getOptions } from '../model/helpers.ts';
+import { getOptions } from '@/shared/lib/utils/tasks-charts-helpers.ts';
 
-import { DATA_DAY, OPTIONS_CHART, DATA_WEEK, DATA_MONTH } from '../model/fake-data.ts';
+import { DATA_DAY, DATA_WEEK, DATA_MONTH } from '@/shared/config/static-data.ts';
 
 import { PeriodSelector } from './PeriodSelector.tsx';
 

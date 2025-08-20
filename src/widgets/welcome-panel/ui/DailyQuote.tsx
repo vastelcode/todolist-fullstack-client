@@ -1,5 +1,5 @@
-import { useDailyQuote } from "../model/useDailyQuote.ts";
-import { WELCOME_TEXTS } from "../model/welcome-content.ts";
+import { useDailyQuote } from "@/shared/lib/hooks/useDailyQuote.ts";
+import { WELCOME_TEXTS } from "@/shared/config/static-data.ts";
 import styles from './WelcomePanel.module.scss';
 
 export const DailyQuote = () => {

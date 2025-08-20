@@ -1,6 +1,6 @@
 import styles from './styles.module.scss';
 
-import { TaskLineChartI } from '../model/types.ts'
+import { TaskLineChartI } from '@/shared/types/types.ts'
 
 import { Line } from 'react-chartjs-2';
 

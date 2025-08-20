@@ -1,5 +1,6 @@
 import { UserLevelProgress } from "@/features/user-level-progress/index.ts";
-import { WELCOME_TEXTS, LEVEL_CONFIG } from "../model/welcome-content.ts";
+import { WELCOME_TEXTS } from "@/shared/config/static-data.ts";
+import { LEVEL_CONFIG } from "@/shared/constants/constants.ts";
 import styles from './WelcomePanel.module.scss';
 
 export const LevelSection = ( { points } : { points: number } ) => {

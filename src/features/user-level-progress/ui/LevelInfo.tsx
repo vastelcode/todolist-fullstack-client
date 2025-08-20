@@ -1,4 +1,4 @@
-import { LevelInfoProps } from '../model/types.ts';
+import { LevelInfoProps } from '@/shared/types/types.ts';
 import styles from './UserLevelProgress.module.scss';
 
 export const LevelInfo = (

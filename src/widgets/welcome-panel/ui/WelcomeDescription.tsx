@@ -1,4 +1,4 @@
-import { WELCOME_TEXTS } from "../model/welcome-content.ts";
+import { WELCOME_TEXTS } from '@/shared/config/static-data.ts';
 import styles from './WelcomePanel.module.scss';
 
 

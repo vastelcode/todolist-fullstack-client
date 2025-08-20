@@ -1,0 +1,49 @@
+@use '@/shared/styles/vars' as *;
+@use '@/shared/styles/animations' as *;
+@use '@/shared/styles/placeholders' as *;
+
+.panel {
+  @extend %flex-col;
+  gap: 20px;
+  width: 396px;
+  height: 100%;
+  background-color: var(--color-bg);
+  padding: 30px 40px;
+  animation: move .5s ease-in-out;
+  font-family: 'Montserrat';
+  color: var(--color-text);
+  &__header {
+    font-weight: 700;
+    font-size: 22px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 16px;
+  }
+}
+
+.tab {
+  width: fit-content;
+  background-color: var(--color-content);
+  padding: 5px;
+  border-radius: 6px;
+  transition: .3s;
+  cursor: pointer;
+  font-weight: 500;
+  &_active {
+    color: white;
+  }
+}
+
+.btn {
+  width: auto;
+  height: 35px;
+  background-color: $color-purple;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: $st-trans;
+  color: white;
+  &:hover {
+    box-shadow: 0px 0px 20px $color-purple;
+  }
+}

@@ -1,8 +1,15 @@
+// импорт стилей
 import styles from './TaskCard.module.scss';
 
+// импортируем типы и интерфейсы
 import { TaskCardI } from '../model/types.ts';
 
-import { iconSubtasks } from '@/shared/assets/icons/index.ts';
+// импортируем иконки
+import { iconPoints } from '@/shared/assets/icons/index.ts';
+
+// импорт функций-хелперов
+import { formatDateToWord } from '@/shared/lib/utils/formatDate.ts';
+import { getPriorityConfig } from '@/shared/lib/utils/getPriorityConfig.ts';
 
 
 export const TaskCard = (
@@ -12,15 +19,14 @@ export const TaskCard = (
     header,
     text,
     date,
-    subtasks,
+    points,
     priority
   } : TaskCardI
 ) => {
 
-  //  определяем цвет по приоритету задачи
-  const color =
-  priority === 'Высокий' ? '#D34141' :
-  priority === 'Средний' ? '#F59E0B' : '#0ACF83';
+  //  определяем цвет и сообщение по приоритету задачи
+  const {color, title} = getPriorityConfig(priority);
+
 
   return (
     // основной контейнер
@@ -41,14 +47,14 @@ export const TaskCard = (
         {text}
       </p>
       <div className={styles['date-display']}>
-        {date}
+        {formatDateToWord(date)}
       </div>
       <div className="flex justify-between">
         
       <div className="flex gap-2">
-        <img src={iconSubtasks} alt="иконка подзадач" className={styles.icon} />
-        <p className={styles['subtasks-text']}>
-          {subtasks}
+        <img src={iconPoints} alt="иконка подзадач" className={styles.icon} />
+        <p className={styles['points-text']}>
+          {points}
         </p>
         </div>
 
@@ -58,11 +64,8 @@ export const TaskCard = (
         backgroundColor: color
       }}
       >
-        {priority}
+        {title}
       </div>
-
-
-
       </div>
     </div>
   );

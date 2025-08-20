@@ -5,11 +5,11 @@ import { TodayTasks } from '@/widgets/today-tasks/index.ts';
 import { ProgressIndicatorCard } from '@/features/progress-indicator/index.ts';
 import { OpenWelcomePanel } from '@/features/overlay/index.ts';
 
-import { PROGRESS_DATA } from '../model/static-data.ts';
+import { PROGRESS_DATA } from '@/shared/config/static-data.ts';
 
 
 import styles from './DashboardPage.module.scss';
-import { iconArrowLeft } from '@/shared/assets/icons/index.ts';
+
 
 
 

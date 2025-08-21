@@ -7,6 +7,12 @@
   background-color: var(--color-content)
 }
 
+.btn {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}
+
 .input {
   @extend %clear-outline-input;
   width: auto;

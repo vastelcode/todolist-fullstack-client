@@ -1,7 +1,5 @@
 import styles from './SearchInput.module.scss';
 
-import { Button } from '@/shared/ui/button/ui/index.ts';
-
 
 import { iconSearch } from '@/shared/assets/icons/index.ts';
 
@@ -19,13 +17,9 @@ export const SearchInput = (
       className={`${styles.input} ${className}`}
       placeholder='Найдите вашу задачу здесь'
       />
-      <Button
-      variation='square'
-      onClick={() => console.log('Нажатие!')}
-      className={styles.btn}
-      >
+      <button className={styles.btn}>
         <img src={iconSearch} alt="" />
-      </Button>
+      </button>
     </div>
   );
 };

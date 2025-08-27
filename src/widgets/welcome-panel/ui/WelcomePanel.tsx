@@ -1,21 +1,36 @@
 import styles from './WelcomePanel.module.scss';
 
+
 import { WelcomeHeader } from './WelcomeHeader.tsx';
 import { WelcomeDescription } from './WelcomeDescription.tsx';
 import { LevelSection } from './LevelSection.tsx';
 import { DailyQuote } from './DailyQuote.tsx';
 
-import { useSelector } from 'react-redux';
-import { RootState } from '@/app/providers/store/index.ts';
+import { useOverlayActions } from '@/shared/lib/hooks/useOverlayActions.ts';
 
-export const WelcomePanel = () => {
 
-  const overlay = useSelector((state: RootState) => state.overlay.isVisible);
+export const WelcomePanel = (
+  { className, isMobile } : { className?: string, isMobile: boolean }
+) => {
+
+  // получаем экшен для скрытия затемнения
+  const { hideOverlayAction } = useOverlayActions();
 
   return (
     <section
-    className={`${styles.panel} flex flex-col gap-5 ${overlay ? styles['panel_active'] : ''}`}
+    className={`${styles.panel} flex flex-col gap-5 ${className}`}
     >
+    {/* кнопка для закрытия меню на мобильных версиях */}
+    {isMobile ? 
+    <button 
+    className={styles.btn}
+    onClick={hideOverlayAction}
+    >
+      X
+    </button>
+    :
+    null
+    }
     <WelcomeHeader userName='Максим' />
     <WelcomeDescription/>
     <LevelSection points={400}/>

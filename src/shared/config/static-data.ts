@@ -1,4 +1,7 @@
-import { Task, ProgressDataI } from "../types/types.ts";
+import { Task } from '../types/task/index.ts';
+import { ProgressDataI } from '../types/user/index.ts';
+
+import uniqual from 'uuid4';
 
 import {
   imageTemplateTask1,
@@ -23,7 +26,8 @@ export const LIST_TASK: Task[] = [
     text: 'Добавить новые проекты и навыки',
     date: '05.09.2025',
     points: 4,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Здоровье',
@@ -32,7 +36,8 @@ export const LIST_TASK: Task[] = [
     text: 'Найти студию рядом с домом',
     date: '25.08.2025',
     points: 2,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Финансы',
@@ -41,7 +46,8 @@ export const LIST_TASK: Task[] = [
     text: 'Распределить расходы на месяц',
     date: '30.08.2025',
     points: 5,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Образование',
@@ -50,7 +56,8 @@ export const LIST_TASK: Task[] = [
     text: 'Пройти 2 урока из курса',
     date: '15.09.2025',
     points: 3,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Личное',
@@ -59,7 +66,8 @@ export const LIST_TASK: Task[] = [
     text: 'Сравнить варианты отелей',
     date: '01.10.2025',
     points: 6,
-    priority: 'low'
+    priority: 'low', 
+ 	 id: uniqual()
   },
   {
     project: 'Хобби',
@@ -68,7 +76,8 @@ export const LIST_TASK: Task[] = [
     text: 'Акварель и кисти',
     date: '22.08.2025',
     points: 1,
-    priority: 'low'
+    priority: 'low', 
+ 	 id: uniqual()
   },
   {
     project: 'Карьера',
@@ -77,7 +86,8 @@ export const LIST_TASK: Task[] = [
     text: 'Повторить алгоритмы',
     date: '08.09.2025',
     points: 7,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Здоровье',
@@ -86,7 +96,8 @@ export const LIST_TASK: Task[] = [
     text: 'Запись в лабораторию',
     date: '28.08.2025',
     points: 3,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Финансы',
@@ -95,7 +106,8 @@ export const LIST_TASK: Task[] = [
     text: 'Сравнить предложения банков',
     date: '20.09.2025',
     points: 4,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Образование',
@@ -104,7 +116,8 @@ export const LIST_TASK: Task[] = [
     text: 'Главы 5-7',
     date: '31.08.2025',
     points: 2,
-    priority: 'low'
+    priority: 'low', 
+ 	 id: uniqual()
   },
   {
     project: 'Личное',
@@ -113,7 +126,8 @@ export const LIST_TASK: Task[] = [
     text: 'Купить продукты и приготовить',
     date: '24.08.2025',
     points: 5,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Хобби',
@@ -122,7 +136,8 @@ export const LIST_TASK: Task[] = [
     text: 'Подборка мотивирующей музыки',
     date: '03.09.2025',
     points: 1,
-    priority: 'low'
+    priority: 'low', 
+ 	 id: uniqual()
   },
   {
     project: 'Карьера',
@@ -131,7 +146,8 @@ export const LIST_TASK: Task[] = [
     text: 'Купить билет и составить план',
     date: '10.10.2025',
     points: 8,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Здоровье',
@@ -140,7 +156,8 @@ export const LIST_TASK: Task[] = [
     text: 'Комплекс для иммунитета',
     date: '29.08.2025',
     points: 2,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Финансы',
@@ -149,7 +166,8 @@ export const LIST_TASK: Task[] = [
     text: 'Коммунальные услуги и интернет',
     date: '07.09.2025',
     points: 3,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Образование',
@@ -158,7 +176,8 @@ export const LIST_TASK: Task[] = [
     text: 'Разговорный клуб в среду',
     date: '27.08.2025',
     points: 4,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Личное',
@@ -167,7 +186,8 @@ export const LIST_TASK: Task[] = [
     text: 'Найти фотографа',
     date: '18.09.2025',
     points: 6,
-    priority: 'low'
+    priority: 'low', 
+ 	 id: uniqual()
   },
   {
     project: 'Хобби',
@@ -176,7 +196,8 @@ export const LIST_TASK: Task[] = [
     text: 'Гончарное искусство',
     date: '05.10.2025',
     points: 3,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Карьера',
@@ -185,7 +206,8 @@ export const LIST_TASK: Task[] = [
     text: 'Написать 5 бывшим коллегам',
     date: '12.09.2025',
     points: 5,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Здоровье',
@@ -194,7 +216,8 @@ export const LIST_TASK: Task[] = [
     text: 'Полное медицинское обследование',
     date: '25.09.2025',
     points: 7,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Финансы',
@@ -203,7 +226,8 @@ export const LIST_TASK: Task[] = [
     text: 'Ребалансировка активов',
     date: '26.08.2025',
     points: 4,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Образование',
@@ -212,7 +236,8 @@ export const LIST_TASK: Task[] = [
     text: 'Начальный модуль',
     date: '09.09.2025',
     points: 3,
-    priority: 'low'
+    priority: 'low', 
+ 	 id: uniqual()
   },
   {
     project: 'Личное',
@@ -221,7 +246,8 @@ export const LIST_TASK: Task[] = [
     text: 'Выбор плитки и сантехники',
     date: '15.10.2025',
     points: 9,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Хобби',
@@ -230,7 +256,8 @@ export const LIST_TASK: Task[] = [
     text: 'Разучить новый аккорд',
     date: '23.08.2025',
     points: 1,
-    priority: 'low'
+    priority: 'low', 
+ 	 id: uniqual()
   },
   {
     project: 'Карьера',
@@ -239,7 +266,8 @@ export const LIST_TASK: Task[] = [
     text: 'Записаться на экзамен',
     date: '28.09.2025',
     points: 6,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Здоровье',
@@ -248,7 +276,8 @@ export const LIST_TASK: Task[] = [
     text: 'Составить программу на неделю',
     date: '21.08.2025',
     points: 3,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Финансы',
@@ -257,7 +286,8 @@ export const LIST_TASK: Task[] = [
     text: 'Сравнить процентные ставки',
     date: '05.09.2025',
     points: 4,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Образование',
@@ -266,7 +296,8 @@ export const LIST_TASK: Task[] = [
     text: 'Практика написания тестов',
     date: '30.08.2025',
     points: 5,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Личное',
@@ -275,7 +306,8 @@ export const LIST_TASK: Task[] = [
     text: 'Выбрать и заказать',
     date: '14.09.2025',
     points: 4,
-    priority: 'low'
+    priority: 'low', 
+ 	 id: uniqual()
   },
   {
     project: 'Хобби',
@@ -284,7 +316,8 @@ export const LIST_TASK: Task[] = [
     text: 'Посетить новый зал',
     date: '25.08.2025',
     points: 2,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Карьера',
@@ -293,7 +326,8 @@ export const LIST_TASK: Task[] = [
     text: 'Выложить последний проект',
     date: '17.09.2025',
     points: 3,
-    priority: 'high'
+    priority: 'high', 
+ 	 id: uniqual()
   },
   {
     project: 'Здоровье',
@@ -302,7 +336,8 @@ export const LIST_TASK: Task[] = [
     text: 'Составить меню на неделю',
     date: '29.08.2025',
     points: 5,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Финансы',
@@ -311,7 +346,8 @@ export const LIST_TASK: Task[] = [
     text: 'Перевести 10% зарплаты',
     date: '02.09.2025',
     points: 2,
-    priority: 'low'
+    priority: 'low', 
+ 	 id: uniqual()
   },
   {
     project: 'Образование',
@@ -320,7 +356,8 @@ export const LIST_TASK: Task[] = [
     text: 'Написать статью про TypeScript',
     date: '08.10.2025',
     points: 7,
-    priority: 'medium'
+    priority: 'medium', 
+ 	 id: uniqual()
   },
   {
     project: 'Личное',
@@ -329,7 +366,8 @@ export const LIST_TASK: Task[] = [
     text: 'Подтвердить участие',
     date: '22.09.2025',
     points: 3,
-    priority: 'low'
+    priority: 'low', 
+ 	 id: uniqual()
   },
 ];
 

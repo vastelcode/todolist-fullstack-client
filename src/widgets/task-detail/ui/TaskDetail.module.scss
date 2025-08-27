@@ -1,0 +1,8 @@
+@use '@/shared/styles' as *;
+
+.container {
+  width: 396px;
+  height: 100%;
+  background-color: var(--color-bg);
+  overflow-y: scroll;
+}

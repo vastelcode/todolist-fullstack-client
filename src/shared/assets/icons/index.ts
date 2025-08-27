@@ -12,7 +12,9 @@ export { default as iconSettingsActive } from './icon-settings-active.svg';
 export { default as iconProjects } from './icon-projects.svg';
 export { default as iconProjectsActive } from './icon-projects-active.svg';
 
-export { default as iconLogo } from './icon-logo.svg';
+export { default as iconLogoDark } from './icon-logo-dark.svg';
+
+export { default as iconLogoLight } from './icon-logo-light.svg';
 
 export { default as iconSearch } from './icon-search.svg';
 
@@ -43,7 +45,8 @@ export const iconNames = [
   'iconSettingsActive',
   'iconProjects',
   'iconProjectsActive',
-  'iconLogo',
+  'iconLogoDark',
+  'iconLogoLight',
   'iconSearch',
   'iconLogout',
   'iconProjectsPurple',

@@ -15,6 +15,15 @@
   font-size: 15px;
   font-weight: 500;
   color: var(--color-text);
+  &_error {
+    border-color: #ff4444 !important;
+    box-shadow: 0 0 0 1px #ff4444;
+  }
+}
+
+.errorText {
+  color: #ff4444;
+  font-size: 12px;
 }
 
 .label {

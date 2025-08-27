@@ -1,0 +1,17 @@
+.tab {
+  width: fit-content;
+  background-color: var(--color-content);
+  padding: 5px;
+  border-radius: 6px;
+  transition: .3s;
+  cursor: pointer;
+  font-weight: 500;
+  &_active {
+    color: white;
+  }
+}
+
+.tabDisabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

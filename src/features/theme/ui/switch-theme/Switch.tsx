@@ -1,9 +1,8 @@
-// 1. импортируем внутренние модули React и Redux
-import { useDispatch, useSelector } from 'react-redux';
+import { selectThemeMode } from '@/shared/lib/selectors/theme-selectors.ts';
 
-// 2. импортируем собственную логику работы с хранилищем
-import { AppDispatch, RootState } from '@/app/providers/store/index.js';
-import { toggleTheme } from '../../model/slice.js';
+import { useSelector } from 'react-redux';
+
+import { useThemeActions } from '@/shared/lib/hooks/useThemeActions.ts';
 
 
 
@@ -13,15 +12,15 @@ import styles from './Switch.module.scss';
 
 export const SwitchTheme = () => {
   // 4. получаем текущую тему из хранилища
-  const theme = useSelector((state: RootState) => state.theme.mode);
+  const theme = useSelector(selectThemeMode);
 
-  // 5. Получаем функцию dispatch для отправки actions
-  const dispatch = useDispatch<AppDispatch>();
+  const { toggleThemeAction } = useThemeActions();
+
 
   return (
     <div
     className={`${styles.switch}`}
-    onClick={() => dispatch(toggleTheme())}
+    onClick={ toggleThemeAction }
     >
       <div className={`${styles["switch__wrapper"]} ${theme === 'dark' ? styles["switch__wrapper--dark"] : styles["switch__wrapper--light"]}`}>
 

@@ -46,7 +46,7 @@ export const DashboardPage = () => {
         </div>
         
       </div>
-      <WelcomePanel/>
+      <WelcomePanel isMobile={false}/>
     </section>
   );
 };

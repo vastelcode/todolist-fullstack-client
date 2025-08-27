@@ -1,13 +1,8 @@
-import styles from './styles.module.scss';
-
-
-
+import { TaskForm } from '@/features/task-form/index.ts';
 
 export const TaskPanel = () => {
-  return (
-    <div className={`${styles.panel}`}>
 
-      
-    </div>
+  return (
+    <TaskForm/>
   );
-}
+};

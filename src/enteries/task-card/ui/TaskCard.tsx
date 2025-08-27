@@ -2,7 +2,7 @@
 import styles from './TaskCard.module.scss';
 
 // импортируем типы и интерфейсы
-import { TaskCardI } from '../model/types.ts';
+import { TaskProps } from '@/shared/types/task/index.ts';
 
 // импортируем иконки
 import { iconPoints } from '@/shared/assets/icons/index.ts';
@@ -10,27 +10,43 @@ import { iconPoints } from '@/shared/assets/icons/index.ts';
 // импорт функций-хелперов
 import { formatDateToWord } from '@/shared/lib/utils/formatDate.ts';
 import { getPriorityConfig } from '@/shared/lib/utils/getPriorityConfig.ts';
+import { getTask } from '@/shared/lib/utils/getTask.ts';
+
+// импорт хуков
+import { useOverlayActions } from '@/shared/lib/hooks/useOverlayActions.ts';
 
 
 export const TaskCard = (
   {
-    project,
-    cover,
-    header,
-    text,
-    date,
-    points,
-    priority
-  } : TaskCardI
+    id
+  } : TaskProps
 ) => {
+
+  // получаем задачу
+  const task = getTask(id);
+  const { priority, header, text, date, points, project, cover } = task;
 
   //  определяем цвет и сообщение по приоритету задачи
   const {color, title} = getPriorityConfig(priority);
 
+  // получаем экшены оверлея
+  const { showOverlayAction }= useOverlayActions();
+
+  // обработчик клика на задачу
+  const handleClick = () => {
+    showOverlayAction({
+      type: 'task-detail',
+      taskID: id
+    })
+  }
+
 
   return (
     // основной контейнер
-    <div className={styles.card}>
+    <div 
+    className={styles.card}
+    onClick={handleClick}
+    >
       {/* блок с тегом проекта */}
       <div className={styles['tag-project']}>
         {project}

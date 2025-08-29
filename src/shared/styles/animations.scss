@@ -4,11 +4,11 @@
 @keyframes fadeIn {
   from {
     opacity: 0;
-    // transform: translateY(50px); 
+    transform: translateY(50px); 
   }
   to {
     opacity: 1;
-    // transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -33,6 +33,10 @@
   } 
 }
 
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 @mixin fade-in($duration: 0.3s) {
   animation: fadeIn $duration ease-in-out;
 }
@@ -43,4 +47,8 @@
 
 @mixin glow($duration: 0.3s) {
   animation: glow $duration ease-in-out infinite;
+}
+
+@mixin spin($duration: 0.3s) {
+  animation: spin $duration ease-in-out infinite;
 }

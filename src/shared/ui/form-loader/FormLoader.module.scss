@@ -1,19 +1,16 @@
+@use '@/shared/styles/animations' as *;
+@use '@/shared/styles/placeholders' as *;
+
 .loader {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %flex-center;
   gap: 8px;
 }
 
 .spinner {
+  @include spin(1s);
   width: 16px;
   height: 16px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   border-top-color: white;
-  animation: spin 1s ease-in-out infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
 }

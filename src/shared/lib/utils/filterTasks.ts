@@ -1,5 +1,5 @@
 
-import { Task, FilterTaskI } from "@/shared/types/types.ts";
+import { Task, FilterTaskI } from "@/shared/types/task/index.ts";
 
 
 

@@ -32,3 +32,9 @@
   font-weight: 500;
   color: var(--color-texrt);
 }
+
+@media (max-width: $content-size-3) {
+  .input {
+    width: 220px;
+  }
+}

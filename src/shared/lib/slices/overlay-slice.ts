@@ -38,6 +38,7 @@ const overlaySlice = createSlice({
     hideOverlay: (state) => {
       state.isVisible = false;
       state.type = null;
+      state.taskID = null;
     }
   }
 });

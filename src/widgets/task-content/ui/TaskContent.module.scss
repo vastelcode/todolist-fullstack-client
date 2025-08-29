@@ -1,0 +1,41 @@
+@use '@/shared/styles/animations' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.content {
+  @include fade-in(1s);
+  width: 731px;
+  display: grid;
+  grid-template-columns: repeat(3, 233px);
+  column-gap: 16px;
+  row-gap: 16px;
+}
+.tabs {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 870px) {
+  .content {
+    width: calc(2 * 233px);
+    display: grid;
+    grid-template-columns: repeat(2, 233px);
+  }
+}
+
+@media (max-width: 580px) {
+  .content {
+    width: 233px;
+    display: grid;
+    grid-template-columns: 233px;
+  }
+  .tabs {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+}

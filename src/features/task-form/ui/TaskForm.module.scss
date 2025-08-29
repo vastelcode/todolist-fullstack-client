@@ -52,3 +52,30 @@
   @extend %flex-col;
   gap: 10px;
 }
+
+
+.btnClose {
+  @extend %flex-center;
+  background-color: $color-purple;
+  width: 50px;
+  min-height: 50px;
+  transition: .3s;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 0px 20px $color-purple;
+  }
+}
+
+
+@media (max-width:$content-size-1) {
+  .panel {
+    display: none;
+  }
+}
+
+@media (max-width: $content-size-3) {
+  .priorityTabs {
+    flex-direction: column;
+  }
+}

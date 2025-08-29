@@ -1,3 +1,6 @@
+@use '@/shared/styles' as *;
+
+
 .taskboard {
   display: flex;
   gap: 40px;
@@ -7,13 +10,6 @@
     height: auto;
     padding: 30px 40px;
   }
-  &__wrapper {
-    width: 731px;
-    display: grid;
-    grid-template-columns: repeat(3, 233px);
-    column-gap: 16px;
-    row-gap: 16px;
-  }
 }
 
 .header {
@@ -21,4 +17,41 @@
   font-family: 'Montserrat';
   font-weight: 500;
   color: var(--color-text);
+}
+
+.wrapper-responsive {
+  width: 731px;
+  display: block;
+}
+
+@media (max-width: $content-size-1) {
+  .taskboard {
+    &__content {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .wrapper-responsive {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 870px) {
+  .taskboard {
+    display: flex;
+    align-items: center;
+    &__content {
+      padding: 10px 20px;
+    }
+  }
+  .wrapper-responsive {
+    width: 466px;
+  }
+}
+
+@media (max-width: 580px) {
+  .wrapper-responsive {
+    width: 233px;
+  }
 }

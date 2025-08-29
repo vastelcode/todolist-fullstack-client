@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react";
+
 export type PriorityT = 'low' | 'medium' | 'high';
 export type TagT = 
   | 'health'       // здоровье
@@ -48,9 +50,10 @@ export interface TaskProps {
 }
 
 
-export interface TaskColumnHeaderI {
+export interface TaskTabProps {
   priority: PriorityT;
-  amount: number;
+  isActive: boolean;
+  onClick?: MouseEventHandler<HTMLDivElement>;
 };
 
 export interface TaskColumnI {

@@ -4,22 +4,16 @@ import { FormLoader } from '@/shared/ui/form-loader/FormLoader.tsx';
 import { Input } from '@/shared/ui/input/index.ts';
 import { TabForm } from '@/shared/ui/tab-form/index.ts';
 
+
 import { TaskFormData } from '@/shared/types/task/index.ts';
 
 import { useTaskForm } from '@/shared/lib/hooks/useTaskForm.ts';
-
-interface TaskFormProps {
-  initialData?: Partial<TaskFormData>;
-  onSubmit: (data: TaskFormData) => void;
-  onCancel: () => void;
-  onDelete?: () => void;
-  onComplete?: () => void;
-  isLoading?: boolean;
-  mode: 'create' | 'edit';
-}
+import { useOverlayActions } from '@/shared/lib/hooks/useOverlayActions.ts';
 
 
-export const TaskForm = () => {
+export const TaskForm = (
+  { className, isMobile } : { className?: string, isMobile: boolean }
+) => {
 
   const {
     formData,
@@ -41,13 +35,28 @@ export const TaskForm = () => {
   }
   );
 
+  const { hideOverlayAction } =useOverlayActions();
+
 
   return (
-    <div className={styles.panel}>
+    // основной контейнер
+    <div className={
+      `${styles.panel} ${className}`
+    }>
+      {isMobile ?
+      <button 
+      className={styles.btnClose}
+      onClick={hideOverlayAction}
+      >
+        X
+      </button> 
+      :
+      null  
+    }
       <p className={styles.panel__header}>
         Создайте новую задачу
       </p>
-      
+      {/* форма */}
       <form onSubmit={handleSubmit} className={styles.form}>
         <Input
           label="Заголовок"
@@ -97,7 +106,7 @@ export const TaskForm = () => {
           disabled={isLoading}
         />
 
-        
+        {/* табы приоритета */}
         <div className={styles.prioritySection}>
           <label className={styles.panel__text}>
             Приоритет задачи*

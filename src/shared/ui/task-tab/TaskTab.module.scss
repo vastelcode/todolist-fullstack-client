@@ -1,25 +1,30 @@
 @use '@/shared/styles/placeholders' as *;
 @use '@/shared/styles/vars' as *;
 
-.task-column-header {
+.container {
   @extend %flex-center;
   width: 233px;
   height: 54px;
   padding: 15px;
-  background-color: var(--color-bg);
+  background-color: var(--color-content);
   border-radius: 16px;
+  transition: .3s;
+  cursor: pointer;
+  &_active,&:hover {
+    background-color: var(--color-bg);
+  }
 }
-.task-column-header__content {
+.content {
   @extend %flex-between;
   flex: 1;
 }
-.task-column-header__text {
+.text {
   color: var(--color-task-header);
   font-family: 'Montserrat';
   font-weight: 500;
   font-size: 17px;
 }
-.task-column-header__label {
+.label {
   @extend %flex-center;
   min-width: 24px;
   width: fit-content;
@@ -30,4 +35,10 @@
   font-size: 15px;
   font-family: 'Montserrat';
   font-weight: 700;
+}
+
+@media (max-width: 870px) {
+  .container {
+    width: 150px;
+  }
 }
